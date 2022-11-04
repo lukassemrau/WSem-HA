@@ -193,19 +193,22 @@ fraction-function=\tfrac
 \vspace{1em}
 
 In der vorliegenden Szene stoppt Spiderman durch seine Spinnennetze einen Zug, um diesen vor dem Absturz zu bewahren. Beim Betrachten der Szene stellen sich folgende Fragen:
-\begin{enumerate}
+\begin{enumerate}[nolistsep]
 	\item Sind die Fäden in der Lage, den Zug aufzuhalten?
 	\item Ist Spiderman stark genug, um diese Seile zu halten, ohne dass seine Arme herausgerissen werden?
 \end{enumerate}
 \section{Halten die Fäden die Bremsung aus?} 
 \subsection{Der Zug}
 Bei dem Zug handelt es sich um das \textsc{2200-series} Modell aus Chicago mit einer Kapazität von 46 Sitzplätzen und einer Masse von $m_\text{Wagon}=\SI{21500}{\kilogram}$. \cite{WSem03} Geht man davon aus, dass auf jeden Sitzplatz zwei Stehplätze kommen, und der Zug zu 85\% ausgelastet ist, sind in einem Wagon 
-$$n = 85\%\cdot \left( 46 + 2\cdot 46 \right)=117,4\approx 117.$$ In einem Frame kann man ablesen, dass der Zug aus 6 solcher Wagons besteht. Insgesamt sind in dem Zug also $n_\text{ges.} = 6\cdot n \approx 700$ zu rettende Personen. Nach \cite{WSem04} wiegt der durchschnittliche US-Amerikaner $m_\text{Person}=\SI{82.6}{\kilogram}$. Die gesamtmasse des Zuges beträgt also
+$$n = 85\%\cdot \left( 46 + 2\cdot 46 \right)=117,4\approx 117 \text{ Menschen.}$$ In einem Frame kann man ablesen, dass der Zug aus 6 solcher Wagons besteht. Insgesamt sind in dem Zug also $n_\text{ges.} = 6\cdot n \approx 700$ zu rettende Personen. Nach \cite{WSem04} wiegt der durchschnittliche US-Amerikaner $m_\text{Person}=\SI{82.6}{\kilogram}$\footnote{Der Wert ergibt sich aus dem Mittelwert des durchschnittlichen Gewichts eines Mannes und einer Frau. Es wird also angenommen, dass in dem Zug 50\% ``Durchschnittsmänner'' und 50\% ``Durchschnittsfrauen'' sitzen.}. Die gesamtmasse des Zuges beträgt also
 \begin{align*}
 	m = n_\text{ges.} \cdot m_\text{Person} + 6\cdot m_\text{Wagon}=\SI{190740}{\kilogram}.
 \end{align*}
 \subsection{Der Bremsvorgang}
-In einem Frame sieht man, dass der Zug eine Ausgangsgeschwindigkeit von 80 Meilen pro Stunde hat. Dies entspricht ca. $v_0=\SI{35}{\meter\per\second}$. \cite{WSem02} Misst man die Zeit zwischen dem zweiten Versuch, den Zug mittels den Spinnenfäden zu stoppen ($v_E=\SI{0}{\meter\per\second}$), und dem Stillstand, so erhält man das Ergebnis $t=\SI{45}{\second}$. Mit den Formeln $a=\frac{\Delta v}{\Delta t}$ und $F = m\cdot a$ kann man nun die Kraft zum Bremsen\footnote{Diese Kraft ist negativ, weil die Kraft entgegen der Bewegungsrichtung wirkt. Im folgenden rechne ich aus Gründen der Einfachheit mit dem positiven Wert weiter.} bestimmen.
+In einem Frame sieht man, dass der Zug eine Ausgangsgeschwindigkeit von 80 Meilen pro Stunde hat. Dies entspricht ca. $v_0=\SI{35}{\meter\per\second}$\footnote{$(80\cdot 0,44704)\si{\meter\per\second}=\SI{35.76}{\meter\per\second}$}. \cite{WSem02} Misst man die Zeit zwischen dem zweiten Versuch, den Zug mittels den Spinnenfäden zu stoppen ($v_E=\SI{0}{\meter\per\second}$), und dem Stillstand, so erhält man das Ergebnis $t=\SI{45}{\second}$. Mit den Formeln 
+\begin{align}
+	a=\frac{\Delta v}{\Delta t} \quad \text{und}\quad  F = m\cdot a 
+\end{align} kann man nun die Kraft zum Bremsen\footnote{Diese Kraft ist negativ, weil die Kraft entgegen der Bewegungsrichtung wirkt. Im folgenden rechne ich aus Gründen der Einfachheit mit dem positiven Wert weiter.} bestimmen.
 \begin{align*}
 	F_\text{Brems} = m \cdot \frac{\Delta v}{\Delta t} = m \cdot \frac{v_E -v_0}{\Delta t} = \SI{-151588.3}{\newton}
 \end{align*}
@@ -220,7 +223,7 @@ Die Frage, die nun noch offen ist, ist, ob die Fäden diese Kraft aushalten kön
 	\caption{Frame, in dem man die Fäden abzählen kann.}
 	\label{fig1}
 \end{marginfigure}
-wobei $\sigma$ die Zugfestigkeit des Materials ist. (bei Spinnenseide: $\sigma = \SI{1.1e9}{\pascal}$, \cite{WSem08}). $A$ ist die Querschnittsfläche des Materials. Angenommen die Fäden seien Zylinder, mit der Grundfläche $G=\pi\cdot (\frac d2)^2$, so kann man zählen, dass Spiderman 16 dieser Fäden spinnt, die Querschnittfläche beträgt also 
+wobei $\sigma$ die Zugfestigkeit des Materials ist. (bei Spinnenseide: $\sigma = \SI{1.1e9}{\pascal}$, \cite{WSem08}). $A$ ist die Querschnittsfläche des Materials. Angenommen die Fäden seien Zylinder, mit der Grundfläche $G=\pi\cdot (\frac d2)^2$, so kann man zählen, dass Spiderman 16 dieser Fäden spinnt (vgl. Abb. \ref{fig1}), die Querschnittfläche beträgt also 
 \begin{align}
 	A=16G=16\cdot \pi\cdot \left(\frac d2\right)^2
 \end{align}
@@ -265,7 +268,7 @@ Im Lauf der Berechnungen wurden viele Annahmen getroffen:
 	\centering
 	\footnotesize
 	\begin{tabularx}{\linewidth}{>{\columncolor{green!60!black!20!white}}X|>{\columncolor{yellow!60!black!30!white}}X|>{\columncolor{red!60!black!20!white}}X}
-		Faktisch belegt & mit Anhaltspunkten abgeschätzt & frei geschätzt \\ \hline
+		Faktisch belegt & mit Belegen abgeschätzt & frei geschätzt \\ \hline
 		Masse des Zugs & Masse der Passangiere &  Zahl der Insassen (Kapazität, Auslastung) \\
 		Zugfestigkeit & Fadendurchmesser&  \\
 		Geschwindigkeit & Fadenzahl&  \\
@@ -276,7 +279,7 @@ Im Lauf der Berechnungen wurden viele Annahmen getroffen:
 	\label{tab:1}
 \end{table}
 
-Auch hat man Faktoren wie die bremsende Wirkung des Endblocks vernachlässigt. Im folgenden soll also unteruscht werden, wie man bestimmte Variablen ändern müsst, damit es die Szene physikalisch möglich ist.\\
+Auch hat man Faktoren wie die bremsende Wirkung des Endblocks vernachlässigt. Im folgenden soll also unteruscht werden, wie man bestimmte Variablen ändern müsst, damit es die Szene physikalisch möglich ist.
 Damit die Szene möglich ist, muss $F_n=F_\text{Brems}$ gelten. Formelmäßig sähe dies so aus:\marginnote{$N$ ist dabei die Anzahl der Fäden.}
 \begin{align}
 	F_n=F_\text{Brems} \Rightarrow \sigma \cdot N\cdot\pi \cdot \frac{d^2}{4} = m \cdot \frac{\Delta v}{\Delta t} \Rightarrow \frac{N}{4}\cdot \sigma\cdot \pi \cdot d^2 = m \cdot \frac{\Delta v}{\Delta t} \label{eq3}
@@ -296,19 +299,20 @@ Damit die Szene möglich ist, muss $F_n=F_\text{Brems}$ gelten. Formelmäßig s�
 	\caption{Das Verhältnis aus $F_n$ und $F_\text{Brems}$ in Abhängigkeit des Durchmessers. Rot die Soll- und blau ise Ist-Linie.}
 	\label{fig4}
 \end{marginfigure}
-Stellt man vorherige Gleichung nach $d$ um, so erhält man 
+Stellt man vorherige Gleichung (mit $N=16$) nach $d$ um, so erhält man 
 \begin{align*}
 	d^* = \sqrt{\frac{F_\text{Brems}}{4\sigma\pi}} = \SI{0.0033}{\meter}=\SI{3.3}{\milli\meter}
 \end{align*}
 $d^*$ ist damit ca. 32\% größer als $d$. ($\frac{d^*}{d}=1.32$)
 \subsection{Anzahl der Fäden}
-Auch hier kann man (\ref{eq3}) umformen, um 
+Auch hier kann man (\ref{eq3}) umformen (dabei ist $d=\SI{2.5}{\milli\meter}$), um 
 \begin{align*}
 	N^*=\frac{F_\text{Brems}}{\sigma G} = 28
 \end{align*}
 zu erhalten. Das heißt, dass Spiderman 28 Fäden vom Durchmesser $d=\SI{0.0025}{\meter}$ spannen müsste, um die benötigte Kraft zu erreichen. Das entspricht 75\% mehr als der verwendeten Fadenzahl.
 \subsection{Anhaltezeit}
 \begin{marginfigure}
+	\vspace{2cm}
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[, axis lines = middle, xmin = 30, xmax = 100, xlabel =  {$\Delta t$ in s}, ylabel = {$F_n/F_\text{Brems}$}, scale = .6, grid = both]
@@ -323,8 +327,8 @@ zu erhalten. Das heißt, dass Spiderman 28 Fäden vom Durchmesser $d=\SI{0.0025}
 \begin{align*}
 	\Delta t^* = m \cdot \frac{\Delta v}{F_n} \approx\SI{79}{\second}
 \end{align*}
-Vergrößert sich die Anhaltezeit um ca. 75\%, so wird die benötigte Bremskraft auf die der Spinnenfäden reduziert.\\
-Man muss aber auch sagen, dass die Anhaltezeit schwer variabel ist, da das Messergebnis doch relativ statisch ist.
+Vergrößert sich die Anhaltezeit um ca. 75\%, so wird die benötigte Bremskraft auf die der Spinnenfäden reduziert.
+Man muss aber auch sagen, dass die Anhaltezeit schwer variabel ist, da das Messergebnis doch relativ statisch ist und bereits zu Gunsten der Szene abgeschätzt ist.
 \begin{mdframed}[style = wichtig, frametitle = Fazit]
 	Durch leichte Abänderung der Werte lässt sich das Ergebnis so hinrechnen, dass die Rettungsaktion physikalisch funktioniert.
 \end{mdframed}
